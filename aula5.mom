@@ -1,0 +1,125 @@
+.PRINTSTYLE TYPESET
+.PAPER A4
+.L_MARGIN 3c
+.R_MARGIN 2c
+.T_MARGIN 3c
+.B_MARGIN 2c
+.PT_SIZE 12
+.JUSTIFY
+.TITLE "Questões da aula extra 5"
+.ATTRIBUTE_STRING ""
+.AUTHOR "Bento Borges Schirmer"
+.HEADER_LEFT "\E*[$TITLE]"
+.HEADER_RIGHT "\*[PAGE#]"
+.PAGINATE OFF
+.PARA_INDENT 0
+.PARA_SPACE .25v
+.START
+.PP
+.DROPCAP 1 3
+O que são plataformas de gerenciamento de redes e quais são suas
+funções principais? Explique como elas contribuem para a operação e
+manutenção de infraestruturas de TI.
+.SPACE
+.SPACE
+.SPACE
+.PP
+São um software, em suma. Uma unidade de software bem grande,
+geralmente com uma interface gráfica interativa, que representa de
+modo unificado toda uma rede, oferenco operações de alto nível
+enquanto cuida de todos os detalhes de baixo nível, como protocolos de
+gerenciamento e as particularidades da rede.
+Nessas plataformas, o gerente pode realizar provisionamento, cuidar da
+topologia da rede, monitorar o desempenho e receber alertas.
+.SPACE -1
+.HEADING 1 "\ "
+.PP
+.DROPCAP 2 3
+.QUAD LEFT
+.ss 10
+Quais são os componentes fundamentais de uma plataforma de
+gerenciamento de redes?
+.ss 12
+.SPACE
+.SPACE
+.SPACE
+.PP
+Os componentes fundamentais são:
+.SPACE .25v
+.LIST BULLET
+.SHIFT_LIST 18p
+.ITEM
+Infraestrutura
+.ITEM
+Módulo de informação
+.ITEM
+Módulo de comunicação
+.ITEM
+Módulo de interface de usuário
+.ITEM
+Aplicações básicas
+.ITEM
+Aplicações de gerenciamento
+.LIST OFF
+.SPACE -1v
+.HEADING 1 "\ "
+.PP
+.DROPCAP 3 3
+Discuta os desafios e benefícios de integrar plataformas de
+gerenciamento em ambientes híbridos ou \fImulticloud\fP. Como garantir
+escalabilidade e interoperabilidade em uma rede heterogênea?
+.SPACE
+.PP
+Ambientes híbridos e \fImulticloud\fP são a regra, não a exceção, bem
+como redes complexas e heterogêneas. Desse modo, o desafio de tratar
+tudo isso é de responsabilidade do vendedor de plataforma de
+gerenciamento, então para o gerente, o verdadeiro desafio é escolher
+qual plataforma não vai deixá-lo na mão, ou então decidir que nenhum
+vendedor resolve os seus problemas e inovar por conta. Os benefícios
+de ambientes híbridos e \fImulticloud\fP é fugir do \fIvendor
+lock-in\fP, aumento de disponibilidade e diminuição de custos.
+.HEADING 1 "\ "
+.DROPCAP 4 3
+O que é CLI e por que ela é amplamente utilizada para o
+gerenciamento de dispositivos de rede? Quais são as vantagens e
+limitações dessa abordagem em comparação com interfaces gráficas e
+protocolos de gerenciamento automatizados?
+.SPACE
+.PP
+CLI é \fIcommand-line interface\fP, que pode ser três tipos: 1) um
+\fIshell\fP interativo, 2) uma aplicação interativa em modo de texto
+ou 3) um script ou utilitário que executa em lote. O CLI é amplamente
+utilizado para o gerenciamento de dispositivos, pois sua existência é
+universal e utilizá-las remotamente é altamente eficiente e confiável.
+A maior desvantagem do CLI em comparação às interfaces gráficas é a
+curva de aprendizado, porém visto que a maioria dos sistemas gráficos
+têm documentação horrível e são de certo modo instáveis, o CLI não tem
+nenhum desvantagem realmente. A comparação com protocolos de
+gerenciamento é irrelevante, visto que são domínio diferentes. 
+.HEADING 1 "\ "
+.DROPCAP 5 3
+Como scripts em linguagens como Python podem ser usados para
+automatizar tarefas repetitivas de gerenciamento via CLI? Explique o
+conceito de \fIscreen scraping\fP e sua relevância nessa automação.
+.SPACE
+.PP
+Puês, o \fIshell\fP interativo do CLI é, em si, uma linguagem de
+scripting também. Diante disso, qual a relevância do Python?
+Acontece que existe uma gama de incompatibilidades entre
+implementações de \fIshells\fP, e uma gama de incompatibilidades entre
+os utilitários do sistemas que o script deve chamar. Tratar essas
+incompatibilidades é um esforço descomunal. Em contraste, o Python
+evoluiu com um forte senso de abstrair as diferenças entre sistemas, e
+por ser uma linguagem de programação propriamente dita, a maioria das
+operações podem ser feitas através de classes e métodos
+uniformes que independem das particularidades do sistema.
+A tendência no mercado é ver cada vez mais scripts tradicionais para
+\*[CODE]cmd.exe\*[CODE X], Bash ou shell POSIX serem reescritos em
+Python, com enormes vantagens de manutenção e usabilidade.
+.PP
+\fIScreen scraping\fP é uma nojeira que acontece quando um serviço não
+oferece uma API, ou oferece uma APi deficiente, e o programador deve
+recorrer a técnicas sujas e precárias como ReGeX, XPath, Selenium e
+OCR para extrair os dados que precisa. Em um mundo ideal, nada disso
+seria aconteceria, mas enquanto não houver compaixão no mundo,
+\fIscreen scraping\fP continuará de mãos dadas à automação.
